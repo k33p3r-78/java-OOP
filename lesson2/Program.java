@@ -4,7 +4,7 @@ public class Program {
 
     public static void main(String[] args) {
         FixedBalanceAccount fBalanceAccount1 = new FixedBalanceAccount(1000.50);
-        FixedBalanceAccount fBalanceAccountZero = new FixedBalanceAccount(0.0);
+        FixedBalanceAccount fBalanceAccountZero = new FixedBalanceAccount(0);
         
         System.out.println(fBalanceAccount1.getBalance());
         System.out.println(fBalanceAccountZero.getBalance());

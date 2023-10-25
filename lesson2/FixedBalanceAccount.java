@@ -6,6 +6,10 @@ public class FixedBalanceAccount extends AbstractAccount {
         super(balance);
     }
 
+    public FixedBalanceAccount(Integer balance) {
+        super(balance);
+    }
+
     public FixedBalanceAccount() {
         throw new IllegalArgumentException("Trying to create zero FixedAccount. If sure use explicit constuctor. eg. FixedBalanceAccount(0.0)");
     }
