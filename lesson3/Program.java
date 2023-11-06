@@ -2,12 +2,8 @@ package lesson3;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Random;
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.function.Function;
 
 public class Program {
     static String names[] = {
