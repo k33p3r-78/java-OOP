@@ -1,6 +1,7 @@
 package lesson4;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class Homework {
@@ -45,24 +46,23 @@ public class Homework {
         System.out.println(goldenAppleBox.getWeight()); // 0
         System.out.println(appleBox.getWeight()); // 30
 
-        // for (Apple apple : appleBox) { // Должно компилироваться
+        for (Apple apple : appleBox) { // Должно компилироваться
+            System.out.println(apple.getWeight());
+        }
 
-        // }
+        for (GoldenApple goldenApple : goldenAppleBox) { // Должно компилироваться
+            System.out.println(goldenApple.getWeight());
+        }
 
-        // for (GoldenApple goldenApple : goldenAppleBox) { // Должно компилироваться
-
-        // }
-
-        // for (Orange orange : orangeBox) { // Должно компилироваться
-
-        // }
+        for (Orange orange : orangeBox) { // Должно компилироваться
+            System.out.println(orange.getWeight());
+        }
 
     }
 
-    static class Box<T extends Fruit> {
+    static class Box<T extends Fruit> implements Iterable<T> {
 
         private List<T> boxContent;
-
 
         public Box() {
             boxContent = new ArrayList<>();
@@ -88,6 +88,11 @@ public class Homework {
                 another.add(t);
             }
             boxContent.clear();
+        }
+
+        @Override
+        public Iterator<T> iterator() {
+            return boxContent.iterator();
         }
 
     }
