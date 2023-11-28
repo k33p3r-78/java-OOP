@@ -10,4 +10,12 @@ public class AccountTest {
         testAccount.put(100);
         Assertions.assertEquals(100, testAccount.getBalance());
     }
+
+    @Test
+    void testGetBalance2() {
+        Account testAccount = new Account();
+        testAccount.put(99);
+        testAccount.take(9);
+        Assertions.assertEquals(90, testAccount.getBalance());
+    }
 }
